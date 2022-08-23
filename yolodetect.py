@@ -144,9 +144,9 @@ class YoloDetect():
                     s += f"{n} {self.names[int(c)]}{'s' * (n > 1)}, "  # add to string
         
                 for *xyxy, conf, cls in reversed(det):
-                    # label = f'{self.names[int(cls)]} {conf:.2f}'
+                    label = f'{self.names[int(cls)]} {conf:.2f}'
                     
-                    # plot_one_box(xyxy, img0, label=label, color=self.colors[int(cls)], line_thickness=1)
+                    plot_one_box(xyxy, img0, label=label, color=self.colors[int(cls)], line_thickness=1)
                     
                     label = self.names[int(cls)]
                     confidence = int(conf.item() * 100)
