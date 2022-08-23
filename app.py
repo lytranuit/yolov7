@@ -16,21 +16,21 @@ app = Flask(__name__)
 # Apply Flask CORS
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['UPLOAD_FOLDER'] = "static"
+app.config['UPLOAD_FOLDER'] = "C:/Users/PCLTC/Desktop/yolov7/static"
 
 classes = ['person'] #You can give list of classes to filter by name, Be happy you don't have to put class number. ['train','person' ]
 
 opt  = {
     
-    "weights": "models/yolov7-tiny.pt", # Path to weights file default weights are for nano model
-    "yaml"   : "data/coco.yaml",
+    "weights": "C:/Users/PCLTC/Desktop/yolov7/models/yolov7-tiny.pt", # Path to weights file default weights are for nano model
+    "yaml"   : "C:/Users/PCLTC/Desktop/yolov7/data/coco.yaml",
     "img-size": 640, # default image size
     "conf-thres": 0.6, # confidence threshold for inference.
     "iou-thres" : 0.45, # NMS IoU threshold for inference.
     "device" : 'cpu',  # device to run our model i.e. 0 or 0,1,2,3 or cpu
     "classes" : classes  # list of classes to filter or None
 }
-model = YoloDetect(opt=opt);
+model = YoloDetect(opt=opt)
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
