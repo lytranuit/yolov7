@@ -69,11 +69,11 @@ points = []
 detect = False
 
 #Video information
-fps = video.get(cv2.CAP_PROP_FPS)
-w = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
-h = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
+# fps = video.get(cv2.CAP_PROP_FPS)
+# w = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
+# h = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
 # nframes = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
-print(f"FPS: {fps}");
+# print(f"FPS: {fps}");
 
 model = YoloDetect();
 # Initialzing object for writing video output
